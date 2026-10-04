@@ -10,7 +10,7 @@ export function Contact() {
       aria-labelledby="contact-title"
     >
       <div className="contact-top">
-        <SectionLabel number="07">Your next chapter</SectionLabel>
+        <SectionLabel>Your next chapter</SectionLabel>
         <span className="eyebrow">Great things start with a conversation.</span>
       </div>
       <h2 id="contact-title" aria-label="Let's build something worth seeing.">

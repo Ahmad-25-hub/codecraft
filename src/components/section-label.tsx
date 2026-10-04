@@ -2,12 +2,12 @@ export function SectionLabel({
   number,
   children,
 }: {
-  number: string;
+  number?: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="section-label eyebrow">
-      <span className="section-number">{number} /</span>
+      {number ? <span className="section-number">{number} /</span> : null}
       <span>{children}</span>
     </div>
   );

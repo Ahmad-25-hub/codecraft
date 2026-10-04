@@ -68,7 +68,7 @@ export function SelectedWork() {
       <div className="work-stage">
         <div className="work-heading">
           <div>
-            <SectionLabel number="03">
+            <SectionLabel>
               A few things we&apos;ve made
             </SectionLabel>
             <h2 id="work-title">

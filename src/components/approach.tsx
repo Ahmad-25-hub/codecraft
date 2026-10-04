@@ -12,7 +12,7 @@ export function Approach() {
   return (
     <section id="about" className="approach" aria-labelledby="approach-title">
       <div className="approach-top">
-        <SectionLabel number="04">The way we think</SectionLabel>
+        <SectionLabel>The way we think</SectionLabel>
         <span className="eyebrow">Equal parts instinct & intention.</span>
       </div>
       <div className="approach-main">

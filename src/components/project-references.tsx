@@ -8,7 +8,7 @@ export function ProjectReferences() {
       aria-labelledby="references-title"
     >
       <div>
-        <SectionLabel number="06">Built on collaboration</SectionLabel>
+        <SectionLabel>Built on collaboration</SectionLabel>
         <h2 id="references-title">
           Real projects.
           <br />

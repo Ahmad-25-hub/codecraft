@@ -9,7 +9,7 @@ export function StudioStatement() {
     >
       <div className="statement-scene">
         <div className="statement-top">
-          <SectionLabel number="01">The studio</SectionLabel>
+          <SectionLabel>The studio</SectionLabel>
           <span className="eyebrow">A little instinct. A lot of craft.</span>
         </div>
         <h2

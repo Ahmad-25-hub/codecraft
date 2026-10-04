@@ -9,7 +9,7 @@ export function Process() {
   return (
     <section className="process page-section" aria-labelledby="process-title">
       <div className="process-heading">
-        <SectionLabel number="05">From possibility to reality</SectionLabel>
+        <SectionLabel>From possibility to reality</SectionLabel>
         <h2 id="process-title" data-reveal>
           OUR PROCESS
         </h2>

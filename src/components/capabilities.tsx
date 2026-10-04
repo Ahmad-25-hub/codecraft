@@ -15,7 +15,7 @@ export function Capabilities() {
       aria-labelledby="services-title"
     >
       <div className="section-heading">
-        <SectionLabel number="02">What we do</SectionLabel>
+        <SectionLabel>What we do</SectionLabel>
         <h2 id="services-title" data-reveal>
           Ideas into
           <br />

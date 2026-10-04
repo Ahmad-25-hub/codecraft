@@ -134,7 +134,7 @@ p {
   align-items: center;
   gap: 18px;
 }
-.section-label > span:first-child {
+.section-label > .section-number {
   opacity: 0.5;
 }
 .page-section {
