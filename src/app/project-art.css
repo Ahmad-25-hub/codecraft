@@ -1,258 +1,122 @@
-.project-visual {
+.project-capture.project-visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.3;
+  aspect-ratio: 1.8;
   overflow: hidden;
-  background: #17201b;
   isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 6% 40px;
+  background: #cfc8db;
+  color: #3a314e;
 }
-.project-visual img {
+.project-capture.biology-education {
+  background: #cbd4c5;
+  color: #2c4330;
+}
+.project-capture.mathematics {
+  background: #bbcbce;
+  color: #213f45;
+}
+.project-capture.biology {
+  background: #d5dec2;
+  color: #324936;
+}
+.project-screen {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 1265 / 712;
+  overflow: hidden;
+  outline: 1px solid #0000000c;
+  box-shadow: 0 16px 32px -20px #15211e66;
+  transition: scale 1s var(--ease);
+}
+.project-screen img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 1.2s var(--ease);
+  object-fit: contain;
 }
-.project-concept {
+.project-open:hover .project-screen {
+  scale: 1.025;
+}
+.capture-index {
   position: absolute;
-  inset: -16px 0;
-  padding: 35px 30px;
-  transition: scale 1s var(--ease);
-  overflow: hidden;
+  left: 2%;
+  bottom: 7%;
+  font-size: clamp(3rem, 10cqw, 10rem);
+  font-weight: 450;
+  letter-spacing: -0.08em;
+  line-height: 0.8;
+  opacity: 0.13;
 }
-.project-open:hover .project-concept {
-  scale: 1.035;
+.capture-address {
+  position: absolute;
+  bottom: 13px;
+  right: 6%;
+  font-size: clamp(0.55rem, 0.9cqw, 0.7rem);
+  letter-spacing: 0.015em;
 }
-.project-open:hover .project-visual img {
-  transform: scale(1.035);
+.project-meta > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  margin-top: -7px;
+  color: var(--ink);
 }
-.concept-top,
-.concept-bottom {
-  position: relative;
-  z-index: 2;
+.project-meta > a:hover {
+  color: var(--accent);
+}
+.project-meta > a .arrow {
+  width: 14px;
+  height: 14px;
+}
+.project-dialog .project-capture.project-visual {
+  padding: 0;
+  aspect-ratio: 1265 / 712;
+}
+.project-dialog .capture-index,
+.project-dialog .capture-address {
+  display: none;
+}
+.project-dialog .project-screen {
+  width: 100%;
+}
+.project-dialog-actions {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  font-size: clamp(0.4rem, 0.61vw, 0.72rem);
-  font-weight: 500;
-  letter-spacing: 0.015em;
-  line-height: 1.3;
+  flex-wrap: wrap;
+  gap: 4px 30px;
+  padding-top: 15px;
 }
-.concept-top > span:nth-child(2) {
-  font-size: 0.5rem;
-  letter-spacing: 0.04em;
-}
-.concept-menu {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.concept-menu b {
-  font-size: 18px;
-  font-weight: 400;
-}
-.concept-bottom {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 43px;
-  align-items: end;
-}
-.concept-disclaimer {
-  position: absolute;
-  z-index: 3;
-  bottom: 12px;
-  left: 30px;
-  font-size: 0.5rem;
-  letter-spacing: 0.02em;
-  opacity: 0.65;
-}
-.faculty {
-  background: #d6decf;
-  color: #173e30;
-}
-.faculty-caption {
-  font-size: 0.5rem;
-  line-height: 1.4;
-  margin-top: 12%;
-  letter-spacing: 0.06em;
-}
-.faculty-word {
-  position: relative;
-  z-index: 2;
-  font-size: clamp(2rem, 5.2vw, 6rem);
-  line-height: 0.95;
-  letter-spacing: -0.065em;
-  margin-top: 22px;
-  font-weight: 500;
-}
-.faculty-word > span {
-  font-family: Georgia, serif;
-  font-style: italic;
-  letter-spacing: -0.06em;
-  font-weight: 400;
-}
-.faculty-orbit {
-  position: absolute;
-  right: 6%;
-  top: 20%;
-  width: 45%;
-  aspect-ratio: 1;
-  border: 1px solid #6c8a7466;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-}
-.faculty-orbit:before,
-.faculty-orbit:after {
-  position: absolute;
-  content: "";
-  inset: -20%;
-  border: 1px solid #6c8a7440;
-  border-radius: 50%;
-  transform: rotate(-35deg) scaleY(0.45);
-}
-.faculty-orbit:after {
-  transform: rotate(35deg) scaleY(0.45);
-}
-.biology-education {
-  background: #e3df78;
-  color: #2b3427;
-  aspect-ratio: 1.04;
-}
-.bio-edu-word {
-  position: relative;
-  z-index: 2;
-  font-size: clamp(2.5rem, 4.6vw, 5.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.06em;
-  margin-top: 14%;
-  font-weight: 500;
-}
-.bio-edu-word > span {
-  font-family: Georgia, serif;
-  font-weight: 400;
-  font-style: italic;
-}
-.bio-specimen {
-  position: absolute;
-  right: 10%;
-  top: 30%;
-  width: 32%;
-  aspect-ratio: 1;
-  border: 1px solid #55612e50;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-.bio-specimen > span {
-  font-size: 0.5rem;
-  z-index: 1;
-}
-.bio-specimen i {
-  position: absolute;
-  inset: 0;
-  border: 1px solid #55612e60;
-  border-radius: 50%;
-  transform: scaleX(0.4);
-}
-.bio-specimen i:nth-of-type(2) {
-  transform: rotate(23deg) scaleX(0.4);
-}
-.bio-specimen i:nth-of-type(3) {
-  transform: rotate(46deg) scaleX(0.4);
-}
-.bio-specimen i:nth-of-type(4) {
-  transform: rotate(69deg) scaleX(0.4);
-}
-.bio-specimen i:nth-of-type(5) {
-  transform: rotate(92deg) scaleX(0.4);
-}
-.bio-specimen i:nth-of-type(6) {
-  transform: rotate(115deg) scaleX(0.4);
-}
-.bio-specimen i:nth-of-type(7) {
-  transform: rotate(138deg) scaleX(0.4);
-}
-.bio-specimen i:nth-of-type(8) {
-  transform: rotate(161deg) scaleX(0.4);
-}
-.mathematics {
-  background: #bfcbd9;
-  color: #20334d;
-  aspect-ratio: 1.07;
-}
-.math-grid {
-  position: absolute;
-  width: 110%;
-  right: -12%;
-  bottom: 2%;
-  height: 80%;
-  opacity: 0.8;
-}
-.math-word {
-  font-size: clamp(2.3rem, 4.5vw, 5.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.06em;
-  position: relative;
-  z-index: 1;
-  margin-top: 18%;
-  font-weight: 450;
-}
-.math-word > span {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-}
-.math-formula {
-  position: absolute;
-  right: 13%;
-  bottom: 22%;
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: clamp(0.9rem, 1.3vw, 1.5rem);
-}
-.biology {
-  background: #273d31;
-  color: #e6e5cb;
-  aspect-ratio: 1.4;
-}
-.biology-index {
-  font-size: 0.5rem;
-  letter-spacing: 0.05em;
-  margin-top: 13%;
-}
-.biology-word {
-  position: relative;
-  z-index: 2;
-  font-size: clamp(2.4rem, 5vw, 6rem);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
-  margin-top: 16px;
-  font-weight: 450;
-}
-.biology-word > span {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-}
-.biology-lines {
-  position: absolute;
-  width: 48%;
-  aspect-ratio: 1;
-  right: 3%;
-  top: 18%;
-  opacity: 0.3;
-}
-.biology-lines i {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border: 1px solid #b3c29c;
-  border-radius: 50% 50% 50% 0;
+@media (max-width: 767px) {
+  .project-capture.project-visual {
+    padding: 18px 12px 30px;
+    aspect-ratio: 1.5;
+  }
+  .capture-address {
+    right: 12px;
+    bottom: 10px;
+    font-size: 0.5rem;
+  }
+  .project-meta {
+    gap: 15px;
+    align-items: start;
+  }
+  .project-meta > a {
+    white-space: nowrap;
+    min-height: 44px;
+    margin-top: -12px;
+  }
+  .project-meta > a .arrow {
+    width: 12px;
+    height: 12px;
+  }
+  .project-dialog-actions .text-link {
+    font-size: 0.75rem;
+  }
 }

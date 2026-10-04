@@ -16,13 +16,26 @@ Open http://127.0.0.1:3000. `npm run build` exports the website to `out/`; `npm 
 Edit `src/lib/content.ts`:
 
 - Set `studio.email` to the confirmed studio address. Until configured, the project enquiry prepares a downloadable/copyable brief and explicitly states that nothing is sent. With an address, it opens the visitor's email application with the brief; there is no backend mail service.
-- Set the Instagram, LinkedIn, and GitHub URLs. Unconfigured destinations are visibly marked and never point to invented profiles.
-- Set each project's verified `year` and `screenshot` (for example `/projects/fmipa.webp`). Add original, optimized screenshots to `public/projects/`. The original concept artwork is replaced automatically. No project URLs, dates, outcomes, metrics, or testimonials were fabricated.
+- Instagram uses the studio-provided `https://www.instagram.com/codecraft.id_/`. LinkedIn, GitHub, and email remain visibly unconfigured.
+- Add each project's `year` only when confirmed. Unknown years are omitted. Website links and optimized WebP screenshots are configured in `src/lib/content.ts` and `public/projects/`.
 
 ## Design and motion
 
-The reference informed the restraint, visual pacing, direct navigation, shifts in scale, and editorial hierarchy. CODECRAFT has its own monochromatic palette, oversized left-aligned typography, geometric hero form, and asymmetric project layouts. No reference code, text, or assets were copied.
+The reference informed the restraint, visual pacing, direct navigation, shifts in scale, and editorial hierarchy. CODECRAFT has its own silver-and-ink palette, asymmetric typography, original chrome sculpture, and moving project exhibition. No reference code, text, or assets were copied.
 
-The hero form is a mathematical SVG with no WebGL. GSAP manages the initial reveal, selected scroll reveals, subtle project movement, and a slow hero drift that pauses off-screen and when the tab is hidden. All GSAP work is scoped and reverted on unmount. Reduced motion disables these effects; mobile omits parallax and continuous motion. Native scrolling is preserved.
+The `Selected work (04)` label counts only the four supplied projects. The portfolio uses actual homepage screenshots captured on October 4, 2026, at 1265 × 712 pixels, with 640-pixel responsive variants. These are locally hosted snapshots, not hotlinked images, and can be refreshed as the websites change. Each project includes a link to its live website.
 
-The `Selected work (04)` label counts only the four supplied projects. Years are deliberately unconfirmed. Project artwork is identified as presentation concepts, not screenshots of the delivered websites.
+Screenshot sources:
+
+- FMIPA UNJ — https://fmipa-baru.unj.ac.id/
+- Pendidikan Biologi UNJ — https://fmipa-baru.unj.ac.id/pendbiologi/
+- Pendidikan Matematika UNJ — https://fmipa-baru.unj.ac.id/pendmatematika/
+- Biologi UNJ — https://fmipa-baru.unj.ac.id/biologi/
+
+## Scroll direction — 2026 revision
+
+The landing page now moves between luminous silver, ink, and full-scale project color fields. A generated chrome sculpture is delivered as responsive WebP assets (109 KB desktop / 42 KB mobile). Typography and the scene transition carry the brand; there is no WebGL or perpetual animation loop.
+
+Desktop motion is a reversible, scroll-driven GSAP sequence: the hero typography parts around a rotating, enlarging sculpture; a circular aperture reveals a second typographic scene; the studio statement fills line by line; the portfolio becomes a pinned horizontal exhibition with perspective and internal parallax. Project index links and keyboard focus synchronize to the correct scroll position. The approach and closing statement use opposing horizontal movement.
+
+Touch layouts use normal vertical scrolling with short, unpinned movements. Reduced-motion preferences disable all scroll choreography and show projects vertically. Without JavaScript the gallery also stays vertical. All timelines, listeners and media-query effects are cleaned up on unmount.

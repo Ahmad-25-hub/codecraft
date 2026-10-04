@@ -1,7 +1,7 @@
 export const studio = {
   email: null as string | null,
   socials: {
-    Instagram: null as string | null,
+    Instagram: "https://www.instagram.com/codecraft.id_/",
     LinkedIn: null as string | null,
     GitHub: null as string | null,
   },
@@ -50,11 +50,12 @@ export type Project = {
   year: string | null;
   description: string;
   theme: "faculty" | "biology-education" | "mathematics" | "biology";
-  screenshot: string | null;
+  screenshot: string;
+  website: string;
 };
 
-// Only the projects and scopes supplied in the brief. Add verified years and
-// original screenshots here; the page automatically replaces visual concepts.
+// URLs supplied by the studio; screenshots captured from the live sites.
+// Publication years remain unset until confirmed by the studio.
 export const projects: Project[] = [
   {
     id: "fmipa",
@@ -67,7 +68,8 @@ export const projects: Project[] = [
     description:
       "A digital home for the Faculty of Mathematics and Natural Sciences at Universitas Negeri Jakarta.",
     theme: "faculty",
-    screenshot: null,
+    screenshot: "/projects/fmipa.webp",
+    website: "https://fmipa-baru.unj.ac.id/",
   },
   {
     id: "pendidikan-biologi",
@@ -80,7 +82,8 @@ export const projects: Project[] = [
     description:
       "An academic program website bringing biology education into a clear digital experience.",
     theme: "biology-education",
-    screenshot: null,
+    screenshot: "/projects/pendidikan-biologi.webp",
+    website: "https://fmipa-baru.unj.ac.id/pendbiologi/",
   },
   {
     id: "pendidikan-matematika",
@@ -93,7 +96,8 @@ export const projects: Project[] = [
     description:
       "A considered digital presence for the mathematics education program at Universitas Negeri Jakarta.",
     theme: "mathematics",
-    screenshot: null,
+    screenshot: "/projects/pendidikan-matematika.webp",
+    website: "https://fmipa-baru.unj.ac.id/pendmatematika/",
   },
   {
     id: "biologi",
@@ -106,7 +110,8 @@ export const projects: Project[] = [
     description:
       "A focused academic website connecting the biology program with its digital audience.",
     theme: "biology",
-    screenshot: null,
+    screenshot: "/projects/biologi.webp",
+    website: "https://fmipa-baru.unj.ac.id/biologi/",
   },
 ];
 

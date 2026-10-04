@@ -63,40 +63,6 @@
 .project-dialog .project-visual {
   aspect-ratio: 1.6;
 }
-.project-dialog .project-concept {
-  padding-top: 35px;
-}
-.project-dialog .concept-top {
-  font-size: 0.65rem;
-}
-.project-dialog .faculty-word,
-.project-dialog .bio-edu-word,
-.project-dialog .math-word,
-.project-dialog .biology-word {
-  font-size: 4.5rem;
-  margin-top: 9%;
-}
-.project-dialog .faculty-caption {
-  margin-top: 7%;
-}
-.project-dialog .faculty-word {
-  margin-top: 18px;
-}
-.project-dialog .biology-word {
-  margin-top: 14px;
-}
-.project-dialog .biology-index {
-  margin-top: 7%;
-}
-.project-dialog .concept-disclaimer {
-  font-size: 0.6rem;
-}
-.project-asset-note {
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: var(--muted);
-  margin: 18px 0 15px;
-}
 .brief-dialog {
   width: min(650px, calc(100% - 40px));
 }
