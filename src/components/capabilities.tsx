@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { services } from "@/lib/content";
+import { services, studio } from "@/lib/content";
 import { SectionLabel } from "./section-label";
 
 export function Capabilities() {
@@ -67,7 +67,12 @@ export function Capabilities() {
       </div>
       <div className="section-tail eyebrow">
         <span>Design-led. Built with purpose.</span>
-        <a href="#contact" className="quiet-link">
+        <a
+          href={studio.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="quiet-link"
+        >
           Find the right direction ↗
         </a>
       </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { studio } from "@/lib/content";
 import { Mark, Arrow } from "./icons";
 
 const links = [
@@ -104,7 +105,9 @@ export function Navigation() {
           {links.map(([label, id]) => (
             <a
               key={id}
-              href={`#${id}`}
+              href={id === "contact" ? studio.whatsapp : `#${id}`}
+              target={id === "contact" ? "_blank" : undefined}
+              rel={id === "contact" ? "noopener noreferrer" : undefined}
               className={id === "contact" ? "contact-link" : ""}
             >
               {label}
@@ -138,7 +141,9 @@ export function Navigation() {
           {links.map(([label, id], index) => (
             <a
               key={id}
-              href={`#${id}`}
+              href={id === "contact" ? studio.whatsapp : `#${id}`}
+              target={id === "contact" ? "_blank" : undefined}
+              rel={id === "contact" ? "noopener noreferrer" : undefined}
               onClick={() => {
                 setOpen(false);
                 toggle.current?.focus();

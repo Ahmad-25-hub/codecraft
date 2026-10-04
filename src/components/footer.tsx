@@ -18,7 +18,16 @@ export function Footer() {
         </div>
         <nav aria-label="Footer navigation">
           {["Work", "Services", "About", "Contact"].map((label) => (
-            <a key={label} href={`#${label.toLowerCase()}`}>
+            <a
+              key={label}
+              href={
+                label === "Contact"
+                  ? studio.whatsapp
+                  : `#${label.toLowerCase()}`
+              }
+              target={label === "Contact" ? "_blank" : undefined}
+              rel={label === "Contact" ? "noopener noreferrer" : undefined}
+            >
               {label}
             </a>
           ))}
@@ -45,13 +54,10 @@ export function Footer() {
               </span>
             ),
           )}
-          {studio.email ? (
-            <a href={`mailto:${studio.email}`}>Email ↗</a>
-          ) : (
-            <span className="pending-social">
-              Email<small>Address pending</small>
-            </span>
-          )}
+          <a href={studio.whatsapp} target="_blank" rel="noopener noreferrer">
+            WhatsApp ↗
+          </a>
+          <a href={`mailto:${studio.email}`}>Email ↗</a>
         </div>
         <a href="#" className="back-top eyebrow">
           Back to top <span>↑</span>

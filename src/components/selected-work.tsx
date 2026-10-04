@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { projects, type Project } from "@/lib/content";
+import { projects, studio, type Project } from "@/lib/content";
 import { Arrow } from "./icons";
 import { SectionLabel } from "./section-label";
 import { ProjectVisual } from "./project-visual";
@@ -153,7 +153,9 @@ export function SelectedWork() {
             </a>
             <a
               className="text-link"
-              href="#contact"
+              href={studio.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setSelected(null)}
             >
               Start a conversation <Arrow />

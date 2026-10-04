@@ -15,8 +15,8 @@ Open http://127.0.0.1:3000. `npm run build` exports the website to `out/`; `npm 
 
 Edit `src/lib/content.ts`:
 
-- Set `studio.email` to the confirmed studio address. Until configured, the project enquiry prepares a downloadable/copyable brief and explicitly states that nothing is sent. With an address, it opens the visitor's email application with the brief; there is no backend mail service.
-- Instagram uses the studio-provided `https://www.instagram.com/codecraft.id_/`. LinkedIn, GitHub, and email remain visibly unconfigured.
+- Contact navigation and project enquiry CTAs open the studio-provided WhatsApp destination `https://wa.me/6287860168627`. Email links use `codecraftofficial.id@gmail.com`. These destinations are centralized in `src/lib/content.ts`.
+- Instagram uses the studio-provided `https://www.instagram.com/codecraft.id_/`. LinkedIn and GitHub remain visibly unconfigured.
 - Add each project's `year` only when confirmed. Unknown years are omitted. Website links and optimized WebP screenshots are configured in `src/lib/content.ts` and `public/projects/`.
 
 ## Design and motion

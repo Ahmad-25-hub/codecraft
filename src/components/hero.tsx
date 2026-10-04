@@ -1,4 +1,5 @@
 import { Arrow } from "./icons";
+import { studio } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -66,7 +67,12 @@ export function Hero() {
               We turn ideas into websites, digital products, and experiences
               people remember.
             </p>
-            <a href="#contact" className="text-link primary-link">
+            <a
+              href={studio.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link primary-link"
+            >
               Start a project <Arrow />
             </a>
           </div>

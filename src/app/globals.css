@@ -1089,6 +1089,26 @@ p {
 .contact-bottom p > span {
   color: #666;
 }
+.contact-copy {
+  min-width: 0;
+}
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+  transition: color 0.3s var(--ease);
+}
+.contact-email:hover {
+  color: var(--accent);
+}
+.contact-email .arrow {
+  width: 16px;
+  height: 16px;
+}
 .contact-cta {
   display: flex;
   align-items: center;

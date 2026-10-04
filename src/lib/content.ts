@@ -1,5 +1,6 @@
 export const studio = {
-  email: null as string | null,
+  email: "codecraftofficial.id@gmail.com",
+  whatsapp: "https://wa.me/6287860168627",
   socials: {
     Instagram: "https://www.instagram.com/codecraft.id_/",
     LinkedIn: null as string | null,
