@@ -1,68 +1,34 @@
 import { Arrow } from "./icons";
-import { DigitalForm } from "./digital-form";
 
 export function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <div className="hero-meta eyebrow">
-        <span>
-          <i className="accent-square" />
-          Digital studio / 2026
-        </span>
-        <span>Independent minds. Shared ambition.</span>
-      </div>
-      <DigitalForm />
-      <h1
-        id="hero-title"
-        className="hero-title"
-        aria-label="We craft digital experiences."
-      >
-        <span className="line-mask">
-          <span>WE CRAFT</span>
-        </span>
-        <span className="line-mask">
-          <span>
-            DIGITAL
-            <span className="hero-asterisk" aria-hidden="true">
-              ✳
-            </span>
-          </span>
-        </span>
-        <span className="line-mask">
-          <span>
-            EXPERIENCES<span className="title-period">.</span>
-          </span>
-        </span>
-      </h1>
-      <div className="hero-bottom">
-        <div className="hero-note eyebrow">
-          Thoughtfully designed.
-          <br />
-          Precisely developed.
+      <div className="hero-scene">
+        <div className="hero-meta eyebrow">
+          <span><i className="accent-square" /> Independent digital studio</span>
+          <span>Design + technology / 2026</span>
         </div>
-        <div className="hero-support">
-          <p>
-            CodeCraft designs and develops modern websites, digital products,
-            and experiences that turn ideas into something people remember.
-          </p>
-          <div className="hero-actions">
-            <a href="#contact" className="text-link primary-link">
-              Start a project
-              <Arrow />
-            </a>
-            <a href="#work" className="text-link secondary-link">
-              View our work
-              <Arrow diagonal />
-            </a>
+        <div className="hero-art" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 767px)" srcSet="/images/chrome-form-mobile.webp" />
+            <img src="/images/chrome-form.webp" alt="" width="1536" height="1024" fetchPriority="high" />
+          </picture>
+        </div>
+        <h1 id="hero-title" className="hero-title" aria-label="We craft digital experiences.">
+          <span className="hero-line line-mask"><span>WE CRAFT</span></span>
+          <span className="hero-line line-mask"><span>DIGITAL</span></span>
+          <span className="hero-line line-mask"><span>EXPERIENCES<span className="title-period">.</span></span></span>
+        </h1>
+        <div className="hero-aside eyebrow"><span>[ IDEA → REALITY ]</span><span>Thoughtfully designed.<br />Precisely developed.</span></div>
+        <div className="hero-bottom">
+          <a href="#work" className="hero-explore"><span className="explore-icon"><Arrow diagonal /></span><span className="eyebrow">Scroll to discover<br />what we can make.</span></a>
+          <div className="hero-support">
+            <p>We turn ideas into websites, digital products, and experiences people remember.</p>
+            <a href="#contact" className="text-link primary-link">Start a project <Arrow /></a>
           </div>
         </div>
-      </div>
-      <div className="hero-foot eyebrow">
-        <a href="#studio">
-          Scroll to explore<span>↓</span>
-        </a>
-        <span>Design meets technology.</span>
-        <span className="hero-coordinate">[ CC — 01 ]</span>
+        <span className="hero-edition eyebrow">Crafting digital experiences.</span>
+        <div className="hero-scroll-line" aria-hidden="true"><span /></div>
       </div>
     </section>
   );

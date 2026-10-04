@@ -1,0 +1,195 @@
+.studio-dialog {
+  background: #101010;
+  color: var(--foreground);
+  border: 1px solid #383838;
+  margin: auto;
+  padding: 65px 48px 40px;
+  width: min(880px, calc(100% - 40px));
+  max-height: calc(100svh - 60px);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.studio-dialog::backdrop {
+  background: #000c;
+}
+.dialog-close {
+  position: absolute;
+  right: 28px;
+  top: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: var(--muted);
+  padding: 8px;
+}
+.dialog-close > span {
+  font-size: 24px;
+  line-height: 1;
+}
+.project-dialog-heading > .eyebrow {
+  color: var(--bright);
+  margin-bottom: 20px;
+}
+.project-dialog-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  font-weight: 450;
+  letter-spacing: -0.045em;
+}
+.project-dialog-heading > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 550px;
+  margin-top: 20px;
+}
+.project-facts {
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin: 28px 0;
+}
+.project-facts dt {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.project-facts dd {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.project-dialog .project-visual {
+  aspect-ratio: 1.6;
+}
+.project-dialog .project-concept {
+  padding-top: 35px;
+}
+.project-dialog .concept-top {
+  font-size: 0.65rem;
+}
+.project-dialog .faculty-word,
+.project-dialog .bio-edu-word,
+.project-dialog .math-word,
+.project-dialog .biology-word {
+  font-size: 4.5rem;
+  margin-top: 9%;
+}
+.project-dialog .faculty-caption {
+  margin-top: 7%;
+}
+.project-dialog .faculty-word {
+  margin-top: 18px;
+}
+.project-dialog .biology-word {
+  margin-top: 14px;
+}
+.project-dialog .biology-index {
+  margin-top: 7%;
+}
+.project-dialog .concept-disclaimer {
+  font-size: 0.6rem;
+}
+.project-asset-note {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 18px 0 15px;
+}
+.brief-dialog {
+  width: min(650px, calc(100% - 40px));
+}
+.brief-dialog > .eyebrow {
+  color: var(--bright);
+  margin-bottom: 22px;
+}
+.brief-dialog h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+.brief-dialog h2 span {
+  color: var(--bright);
+  display: inline;
+}
+.brief-intro {
+  margin-top: 24px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 430px;
+  font-size: 0.95rem;
+}
+.brief-dialog form {
+  margin-top: 35px;
+}
+.brief-dialog label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 24px;
+}
+.brief-dialog input,
+.brief-dialog textarea {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #444;
+  border-radius: 0;
+  padding: 14px 0;
+  color: var(--foreground);
+  font-size: 1rem;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.brief-dialog input::placeholder,
+.brief-dialog textarea::placeholder {
+  color: #777;
+}
+.brief-dialog textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.brief-notice {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #999;
+  margin-top: 20px;
+  max-width: 450px;
+}
+.brief-submit {
+  border-bottom: 1px solid #777;
+  margin-top: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+.brief-result {
+  margin-top: 30px;
+}
+.brief-result > p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.brief-dialog .brief-preview {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  border: 1px solid #444;
+  padding: 16px;
+  margin-top: 22px;
+}
+.brief-result-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 12px;
+}
+.brief-edit {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 25px;
+  padding: 5px 0;
+}

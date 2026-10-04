@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   icons: { icon: "/favicon.svg" },
 };
-export const viewport: Viewport = { themeColor: "#0A0A0A" };
+export const viewport: Viewport = { themeColor: "#eeefed" };
 
 export default function RootLayout({
   children,
